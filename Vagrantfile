@@ -6,7 +6,9 @@ CORES = ENV['GITLAB_VAGRANT_CORES'] || '1'
 Vagrant::Config.run do |config|
   config.vm.box = "precise32"
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
-  config.vm.network :hostonly, '192.168.3.14'
+  # config.vm.network :hostonly, '192.168.3.14'
+  config.vm.network :hostonly, "192.168.50.10"
+  # config.vm.network :forwarded_port, host: 4567, guest: 80
 
   # Default user/group id for vagrant in precise32
   host_user_id = 1000

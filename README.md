@@ -153,3 +153,4 @@ $ cd gitlabhq && git pull --ff origin master
 ```
 
 A bit of background on why this is needed. When you run 'vagrant up' there is a [checkout action in the recipe](https://github.com/gitlabhq/gitlab-vagrant-vm/blob/master/site-cookbooks/gitlab/recipes/vagrant.rb#L54) that [points to](https://github.com/gitlabhq/gitlab-vagrant-vm/blob/master/site-cookbooks/gitlab/attributes/vagrant.rb#L10) the [gitlabhq repo](https://github.com/gitlabhq/gitlabhq). You won't see any difference when running 'git status' in the gitlab-vagrant-vm repo because gitlabhq/ is in the [.gitignore](https://github.com/gitlabhq/gitlab-vagrant-vm/blob/master/.gitignore). You can update the gitlabhq repo yourself or remove the gitlabhq directory so the repo is checked out again.
+
